@@ -21,20 +21,7 @@ console.log(" → Type: " + testTriangle1.getType());
 console.log(" → Angle 1: " + testTriangle1.angle(1).toFixed(4) + " rad");
 console.log(" → Angle 2: " + testTriangle1.angle(2).toFixed(4) + " rad");
 console.log(" → Angle 3: " + testTriangle1.angle(3).toFixed(4) + " rad");
-console.log(" → Height 1: " + testTriangle1.height(1).toFixed(4) + " mm");
-console.log(" → Height 2: " + testTriangle1.height(2).toFixed(4) + " mm");
-console.log(" → Height 3: " + testTriangle1.height(3).toFixed(4) + " mm");
-console.log(
-  " → Inner circle radius: " +
-    testTriangle1.innerCircleRadius().toFixed(4) +
-    " mm"
-);
-console.log(
-  " → Circumcircle radius: " +
-    testTriangle1.circumsicleRadius().toFixed(4) +
-    " mm"
-);
-console.log("");
+console.log("")
 
 const testTriangle2 = new Triangle(3, 3, 3);
 console.log("Created a 3 mm by 3 mm by 3 mm triangle.");
@@ -50,16 +37,6 @@ console.log(" → Angle 3: " + testTriangle2.angle(3).toFixed(4) + " rad");
 console.log(" → Height 1: " + testTriangle2.height(1).toFixed(4) + " mm");
 console.log(" → Height 2: " + testTriangle2.height(2).toFixed(4) + " mm");
 console.log(" → Height 3: " + testTriangle2.height(3).toFixed(4) + " mm");
-console.log(
-  " → Inner circle radius: " +
-    testTriangle2.innerCircleRadius().toFixed(4) +
-    " mm"
-);
-console.log(
-  " → Circumcircle radius: " +
-    testTriangle2.circumsicleRadius().toFixed(4) +
-    " mm"
-);
 console.log("");
 
 const testTriangle3 = new Triangle(3, 4, 4);
@@ -76,16 +53,6 @@ console.log(" → Angle 3: " + testTriangle3.angle(3).toFixed(4) + " rad");
 console.log(" → Height 1: " + testTriangle3.height(1).toFixed(4) + " mm");
 console.log(" → Height 2: " + testTriangle3.height(2).toFixed(4) + " mm");
 console.log(" → Height 3: " + testTriangle3.height(3).toFixed(4) + " mm");
-console.log(
-  " → Inner circle radius: " +
-    testTriangle3.innerCircleRadius().toFixed(4) +
-    " mm"
-);
-console.log(
-  " → Circumcircle radius: " +
-    testTriangle3.circumsicleRadius().toFixed(4) +
-    " mm"
-);
 console.log("");
 
 const testTriangle4 = new Triangle(2, 3, 4);
@@ -102,16 +69,6 @@ console.log(" → Angle 3: " + testTriangle4.angle(3).toFixed(4) + " rad");
 console.log(" → Height 1: " + testTriangle4.height(1).toFixed(4) + " mm");
 console.log(" → Height 2: " + testTriangle4.height(2).toFixed(4) + " mm");
 console.log(" → Height 3: " + testTriangle4.height(3).toFixed(4) + " mm");
-console.log(
-  " → Inner circle radius: " +
-    testTriangle4.innerCircleRadius().toFixed(4) +
-    " mm"
-);
-console.log(
-  " → Circumcircle radius: " +
-    testTriangle4.circumsicleRadius().toFixed(4) +
-    " mm"
-);
 console.log("");
 
 const testTriangle5 = new Triangle(23, 4, 6);
@@ -128,16 +85,6 @@ console.log(" → Angle 3: " + testTriangle5.angle(3).toFixed(4) + " rad");
 console.log(" → Height 1: " + testTriangle5.height(1).toFixed(4) + " mm");
 console.log(" → Height 2: " + testTriangle5.height(2).toFixed(4) + " mm");
 console.log(" → Height 3: " + testTriangle5.height(3).toFixed(4) + " mm");
-console.log(
-  " → Inner circle radius: " +
-    testTriangle5.innerCircleRadius().toFixed(4) +
-    " mm"
-);
-console.log(
-  " → Circumcircle radius: " +
-    testTriangle5.circumsicleRadius().toFixed(4) +
-    " mm"
-);
 console.log("");
 
 console.log("\nDone.");
