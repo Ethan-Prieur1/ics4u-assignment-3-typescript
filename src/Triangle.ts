@@ -11,7 +11,7 @@ class Triangle {
   private readonly side2: number
   private readonly side3: number
 
-  constructor(length1: number, length2: number. length3: number)
+  constructor (length1: number, length2: number. length3: number)
     this.side1 = length1
     this.side2 = length2
     this.side3 = length3
