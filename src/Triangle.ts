@@ -11,7 +11,7 @@ class Triangle {
   private readonly side2: number
   private readonly side3: number
 
-  constructor (length1: number, length2: number. length3: number)
+  constructor(length1: number, length2: number. length3: number)
     this.side1 = length1
     this.side2 = length2
     this.side3 = length3
@@ -31,7 +31,14 @@ class Triangle {
   }
 
   private getPerimeter(): number {
-   return this.side1 + this.side2 + this.side3
+    let perimeter1
+
+    if (this.isValid()) {
+      perimeter1 = this.Side1 + this.Side2 + this.Side3
+    } else {
+      perimeter1 = -1
+    }
+    return perimeter1
   }
 
   public isValid(): boolean {
@@ -47,7 +54,13 @@ class Triangle {
         }
 
   public getSemiPerimeter(): number {
-    return this.getPerimeter / 2
+    if (!this.isValid()) {
+      const semiPerimeter = -1
+      return semiPerimeter
+   } else {
+      const semiperimeter = (this.sideA + this.sideB + this.sideC) / 2
+      return semiperimeter
+    }
   }
 
 
@@ -58,25 +71,34 @@ class Triangle {
           )
   }
 
-  public getType(): string {
-          let triangleType
-          if (this.side1 == this.side2 && this.side2 == this.side3) {
-                  triangleType = 'Equilateral'
-  } else if (
-          this.side1 ** 2 + this.side2 ** 2 === this.side3 ** 2||
-          this.side3 ** 2 - this.side2 ** 2 === this.side1 ** 2||
-          this.side1 ** 2 + this.side3 ** 2 === this.side2 ** 2
-                triangleType = 'Right Angle'
-  } else if (
-      this.side1 === this.side2 &&
-      this.side2 === this.side3 &&
-      this.side1 === this.side3
+  getType(): string {
+    if (!this.isValid()) {
+      const shape = '-1'
+      return shape
+    } else if (this.sideA === this.sideB && this.sideB === this.sideC) {
+      const shape = 'Equilateral Triangle'
+      return shape
+    } else if (
+      this.sideA === this.sideB ||
+      this.sideB === this.sideC ||
+      this.sideA === this.sideC
     ) {
-      triangleType = 'Isoceles'
+      const shape = 'Isosceles Triangle'
+      return shape
+    } else if (
+      this.sideA * this.sideA + this.sideB * this.sideB ===
+        this.sideC * this.sideC ||
+      this.sideC * this.sideC + this.sideB * this.sideB ===
+        this.sideA * this.sideA ||
+      this.sideC * this.sideC + this.sideA * this.sideA ===
+        this.sideB * this.sideB
+    ) {
+      const shape = 'Right angle Triangle'
+      return shape
     } else {
-      triangleType = 'Scalene'
+      const shape = 'Scalene Triangle!'
+      return shape
     }
-    return triangleType
   }
 
   public angle (angleNumber: number): number {
@@ -110,7 +132,3 @@ class Triangle {
   }
 }
 export = Triangle
-  
-}
-
-export = Vehicle
