@@ -64,10 +64,13 @@ class Triangle {
 
   public getType(): string {
           let triangleType
-          if (this.side1 == this.side2 && this.side1 == this.side3 $$ this.side2 == this.side3) {
-                  triangleType = "Equilateral
+          if (this.side1 == this.side2 && this.side2 == this.side3) {
+                  triangleType = 'Equilateral'
   } else if (
-
+          this.side1 ** 2 + this.side2 ** 2 === this.side3 ** 2||
+          this.side3 ** 2 - this.side2 ** 2 === this.side1 ** 2||
+          this.side1 ** 2 + this.side3 ** 2 === this.side2 ** 2
+                triangleType = 'Right Angle'
   public status(): void {
     console.log(
       `        --> Side1: ${this.side1}
