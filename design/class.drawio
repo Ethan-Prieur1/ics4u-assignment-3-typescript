@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="bVoswQC8T6PlKmy4Bn8u" name="Page-1">
-        <mxGraphModel dx="1074" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1074" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="Triangle" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-                    <mxGeometry x="220" y="230" width="300" height="240" as="geometry"/>
+                    <mxGeometry x="220" y="230" width="300" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="3" value="- sideA: number&#10;- sideB: number&#10;- sideC: number" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="26" width="300" height="54" as="geometry"/>
@@ -13,8 +13,8 @@
                 <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="80" width="300" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="+ isTriangleValid(): boolean&#10;+ triangleName(): string&#10;+ trianglePerimeter(): number&#10;+ triangleSemiperimeter(): number&#10;+ triangleArea(): number&#10;+ triangleAngle(side: number): number&#10;+ triangleHeight(side: number): number&#10;+ innerCircleRadius(): number&#10;+ circumRadiusTriangle(): number&#10;+ status(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="88" width="300" height="152" as="geometry"/>
+                <mxCell id="5" value="+ isTriangleValid(): boolean&#10;+ triangleName(): string&#10;+ trianglePerimeter(): number&#10;+ triangleSemiperimeter(): number&#10;+ triangleArea(): number&#10;+ triangleAngle(side: number): number&#10;+ status(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="88" width="300" height="122" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
