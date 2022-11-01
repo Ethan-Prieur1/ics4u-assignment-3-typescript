@@ -13,7 +13,7 @@
                 <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="80" width="300" height="8" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="+ isTriangleValid(): boolean&#10;+ triangleName(): string&#10;+ trianglePerimeter(): number&#10;+ triangleSemiperimeter(): number&#10;+ triangleArea(): number&#10;+ triangleAngle(side: number): number&#10;+ status(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                <mxCell id="5" value="+ isValid(): boolean&#10;+ Type(): string&#10;+ Perimeter(): number&#10;+ Semiperimeter(): number&#10;+ Area(): number&#10;+ Angle(side: number): number&#10;+ status(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
                     <mxGeometry y="88" width="300" height="122" as="geometry"/>
                 </mxCell>
             </root>
