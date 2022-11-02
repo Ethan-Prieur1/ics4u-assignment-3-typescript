@@ -21,7 +21,7 @@ console.log(" → Type: " + testTriangle1.getType());
 console.log(" → Angle 1: " + testTriangle1.angle(1).toFixed(4) + " rad");
 console.log(" → Angle 2: " + testTriangle1.angle(2).toFixed(4) + " rad");
 console.log(" → Angle 3: " + testTriangle1.angle(3).toFixed(4) + " rad");
-console.log("")
+console.log("");
 
 const testTriangle2 = new Triangle(3, 3, 3);
 console.log("Created a 3 mm by 3 mm by 3 mm triangle.");
