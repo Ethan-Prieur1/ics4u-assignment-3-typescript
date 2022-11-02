@@ -47,9 +47,6 @@ console.log(" → Type: " + testTriangle3.getType());
 console.log(" → Angle 1: " + testTriangle3.angle(1).toFixed(4) + " rad");
 console.log(" → Angle 2: " + testTriangle3.angle(2).toFixed(4) + " rad");
 console.log(" → Angle 3: " + testTriangle3.angle(3).toFixed(4) + " rad");
-console.log(" → Height 1: " + testTriangle3.height(1).toFixed(4) + " mm");
-console.log(" → Height 2: " + testTriangle3.height(2).toFixed(4) + " mm");
-console.log(" → Height 3: " + testTriangle3.height(3).toFixed(4) + " mm");
 console.log("");
 
 const testTriangle4 = new Triangle(2, 3, 4);
@@ -63,9 +60,6 @@ console.log(" → Type: " + testTriangle4.getType());
 console.log(" → Angle 1: " + testTriangle4.angle(1).toFixed(4) + " rad");
 console.log(" → Angle 2: " + testTriangle4.angle(2).toFixed(4) + " rad");
 console.log(" → Angle 3: " + testTriangle4.angle(3).toFixed(4) + " rad");
-console.log(" → Height 1: " + testTriangle4.height(1).toFixed(4) + " mm");
-console.log(" → Height 2: " + testTriangle4.height(2).toFixed(4) + " mm");
-console.log(" → Height 3: " + testTriangle4.height(3).toFixed(4) + " mm");
 console.log("");
 
 const testTriangle5 = new Triangle(23, 4, 6);
@@ -79,9 +73,6 @@ console.log(" → Type: " + testTriangle5.getType());
 console.log(" → Angle 1: " + testTriangle5.angle(1).toFixed(4) + " rad");
 console.log(" → Angle 2: " + testTriangle5.angle(2).toFixed(4) + " rad");
 console.log(" → Angle 3: " + testTriangle5.angle(3).toFixed(4) + " rad");
-console.log(" → Height 1: " + testTriangle5.height(1).toFixed(4) + " mm");
-console.log(" → Height 2: " + testTriangle5.height(2).toFixed(4) + " mm");
-console.log(" → Height 3: " + testTriangle5.height(3).toFixed(4) + " mm");
 console.log("");
 
 console.log("\nDone.");
