@@ -3,34 +3,34 @@
  *
  * By:      Ethan Prieur
  * Version: 1.0
- * Since:   2022-10-18
+ * Since:   2022-11-1
  */
 
 class Triangle {
-  private readonly side1: number
-  private readonly side2: number
-  private readonly side3: number
+  private readonly Side1: number
+  private readonly Side2: number
+  private readonly Side3: number
 
-  constructor(length1: number, length2: number. length3: number)
-    this.side1 = length1
-    this.side2 = length2
-    this.side3 = length3
+  constructor (Side1: number, Side2: number, Side3: number) {
+    this.Side1 = Side1
+    this.Side2 = Side2
+    this.Side3 = Side3
   }
 
   // getters
-  public getSide1(): number {
-    return this.side1
+  public getSide1 (): number {
+    return this.Side1
   }
 
-  public getSide2(): number {
-    return this.side2
+  public getSide2 (): number {
+    return this.Side2
   }
 
-  public getSide3(): number {
-    return this.side3
+  public getSide3 (): number {
+    return this.Side3
   }
 
-  private getPerimeter(): number {
+  private perimeter (): number {
     let perimeter1
 
     if (this.isValid()) {
@@ -41,69 +41,70 @@ class Triangle {
     return perimeter1
   }
 
-  public isValid(): boolean {
-    if (
-            this.side1 + this.side2 > this.side3 &&
-            this.side1 + this side3 > this.side2 &&
-            this.side2 + this.side2 > this.side1
-      ) { 
-              return true
-
-        }
-              return false
-        }
-
-  public getSemiPerimeter(): number {
-    if (!this.isValid()) {
-      const semiPerimeter = -1
-      return semiPerimeter
-   } else {
-      const semiperimeter = (this.sideA + this.sideB + this.sideC) / 2
-      return semiperimeter
+  public isValid (): boolean {
+    let valid = false
+    const sides = [this.Side1, this.Side2, this.Side3]
+    if (!(Math.min(...sides) < 0)) {
+      const sides = [this.Side1, this.Side2, this.Side3]
+      sides.sort(function (a, b) {
+        return a - b
+      })
+      valid = sides[0] + sides[1] > sides[2]
     }
+
+    return valid
   }
 
-
-  public getArea(): number {
-          const semiP = this.getSemiPerimeter
-          return Math.sqrt(
-                  semiP * (semiP - this.side1) * (semiP - this.side2) * (semiP - this.side3)
-          )
+  public area (): number {
+    const semiP = this.semiPerimeter()
+    const area = Math.sqrt(
+      semiP * (semiP - this.Side1) * (semiP - this.Side2) * (semiP - this.Side3)
+    )
+    return area
   }
 
-  getType(): string {
-    if (!this.isValid()) {
-      const shape = '-1'
-      return shape
-    } else if (this.sideA === this.sideB && this.sideB === this.sideC) {
-      const shape = 'Equilateral Triangle'
-      return shape
+  public getType (): string {
+    let triangle = ''
+    if (this.Side1 === this.Side2 && this.Side2 === this.Side3) {
+      triangle = 'Equilateral Triangle'
     } else if (
-      this.sideA === this.sideB ||
-      this.sideB === this.sideC ||
-      this.sideA === this.sideC
+      (this.Side1 === this.Side2 && this.Side1 !== this.Side3) ||
+      (this.Side2 === this.Side3 && this.Side2 !== this.Side1) ||
+      (this.Side3 === this.Side1 && this.Side3 !== this.Side2)
     ) {
-      const shape = 'Isosceles Triangle'
-      return shape
-    } else if (
-      this.sideA * this.sideA + this.sideB * this.sideB ===
-        this.sideC * this.sideC ||
-      this.sideC * this.sideC + this.sideB * this.sideB ===
-        this.sideA * this.sideA ||
-      this.sideC * this.sideC + this.sideA * this.sideA ===
-        this.sideB * this.sideB
-    ) {
-      const shape = 'Right angle Triangle'
-      return shape
+      triangle = 'Isoceles Triangle'
     } else {
-      const shape = 'Scalene Triangle!'
-      return shape
+      const allAngles = [this.angle(1), this.angle(2), this.angle(3)]
+      let angleCheck = false
+
+      for (let count = 0; count < allAngles.length; count++) {
+        if (allAngles[count] * (180 / Math.PI) === 90) {
+          angleCheck = true
+          break
+        }
+      }
+
+      if (angleCheck) {
+        triangle = 'Right Angle Triangle'
+      } else {
+        triangle = 'Scalene Triangle'
+      }
     }
+    return triangle
+  }
+
+  public semiPerimeter (): number {
+    let sPerimeter
+    if (this.isValid()) {
+      sPerimeter = this.perimeter() / 2
+    } else {
+      sPerimeter = -1
+    }
+    return sPerimeter
   }
 
   public angle (angleNumber: number): number {
     if (this.isValid() && angleNumber > 0 && angleNumber < 4) {
-      // I do not want to redo this, so I will leave the array here.
       const radianAngles = [
         Math.acos(
           (Math.pow(this.Side1, 2) +
