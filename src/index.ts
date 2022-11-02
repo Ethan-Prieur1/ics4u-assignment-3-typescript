@@ -34,9 +34,6 @@ console.log(" → Type: " + testTriangle2.getType());
 console.log(" → Angle 1: " + testTriangle2.angle(1).toFixed(4) + " rad");
 console.log(" → Angle 2: " + testTriangle2.angle(2).toFixed(4) + " rad");
 console.log(" → Angle 3: " + testTriangle2.angle(3).toFixed(4) + " rad");
-console.log(" → Height 1: " + testTriangle2.height(1).toFixed(4) + " mm");
-console.log(" → Height 2: " + testTriangle2.height(2).toFixed(4) + " mm");
-console.log(" → Height 3: " + testTriangle2.height(3).toFixed(4) + " mm");
 console.log("");
 
 const testTriangle3 = new Triangle(3, 4, 4);
